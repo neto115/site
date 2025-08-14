@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controle de Gastos Pessoal</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Controle de Gastos Pessoal</h1>
+    <form id="transactionForm">
+      <input type="text" id="desc" placeholder="Descrição" required />
+      <input type="number" id="amount" placeholder="Valor (R$)" step="0.01" required />
+      <select id="type">
+        <option value="income">Receita</option>
+        <option value="expense">Despesa</option>
+      </select>
+      <button type="submit">Adicionar</button>
+    </form>
+
+    <div class="summary">
+      <div>Saldo: <span id="balance">R$ 0.00</span></div>
+      <div>Receitas: <span id="totalIncome">R$ 0.00</span></div>
+      <div>Despesas: <span id="totalExpense">R$ 0.00</span></div>
+    </div>
+
+    <ul id="transactionList"></ul>
+
+    <div class="chart-container">
+      <canvas id="balanceChart"></canvas>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

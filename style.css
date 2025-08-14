@@ -1,0 +1,90 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+input, select, button {
+  padding: 10px;
+  font-size: 16px;
+}
+input, select {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  width: 100px;
+  transition: background 0.3s;
+}
+button:hover {
+  background: #218838;
+}
+.summary {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+#transactionList {
+  list-style: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+#transactionList li {
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 5px solid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+}
+#transactionList li.income {
+  border-color: #28a745;
+  background: #e6f4ea;
+}
+#transactionList li.expense {
+  border-color: #dc3545;
+  background: #f9e6e6;
+}
+#transactionList button {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  font-size: 18px;
+}
+#transactionList button:hover {
+  color: #dc3545;
+}
+.chart-container {
+  position: relative;
+  height: 300px;
+}
